@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shubhan Mehrotra Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="theme.js" defer></script>
+  <script defer>
+    document.addEventListener('DOMContentLoaded', function() {
+      const workTab = document.getElementById('tab-work');
+      const eduTab = document.getElementById('tab-edu');
+      const workPanel = document.getElementById('work-panel');
+      const eduPanel = document.getElementById('edu-panel');
+      function showWork() {
+        workTab.classList.add('active');
+        eduTab.classList.remove('active');
+        workPanel.style.display = 'block';
+        eduPanel.style.display = 'none';
+      }
+      function showEdu() {
+        eduTab.classList.add('active');
+        workTab.classList.remove('active');
+        eduPanel.style.display = 'block';
+        workPanel.style.display = 'none';
+      }
+      workTab.addEventListener('click', showWork);
+      eduTab.addEventListener('click', showEdu);
+      showWork();
+    });
+  </script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button id="theme-toggle" title="Toggle Theme">🌙</button>
+  </nav>
+  <section class="hero">
+    <div class="intro">
+      <h1 style="font-size:2.8em; margin-bottom:0.2em;">Hi 👋 Shubhan here</h1>
+      <p style="font-size:1.2em; margin-top:0; margin-bottom: 1.5em;">I am a 22 yo Software Engineer from India.<br>I love solving problems and creating effective solutions. Explore my journey below!</p>
+    </div>
+    <img src="mypfp.jpeg" alt="Profile Photo" class="profile-pic" />
+    <h1>Shubhan Mehrotra</h1>
+    <p>Software Engineer<br>Entrupy</p>
+    <div class="contact-info">
+      <span>+91-9714957474</span> · 
+      <a href="mailto:shubhanmehrotra@gmail.com" title="Email"><img src="maillogo.png" alt="Email" style="height:22px;vertical-align:middle;"></a> · 
+      <a href="https://github.com/onyxmytrojin" target="_blank" title="Github"><img src="githublogo.png" alt="Github" style="height:28px;vertical-align:middle;"></a> · 
+      <a href="https://www.linkedin.com/in/shubhanmehrotra/" target="_blank" title="Linkedin"><img src="linkedinlogo.png" alt="Linkedin" style="height:23px;vertical-align:middle;"></a>
+      <span class="resume-link-container">
+        <a href="cv_shubhanmehrotra_development (2).pdf" target="_blank" title="Download Resume" style="display:inline-flex;align-items:center;gap:4px;margin-left:8px;text-decoration:none;">
+          <img src="downloadlogo.png" alt="Download Resume" style="height:22px;vertical-align:middle;" />
+          <span style="font-size:1em;color:inherit;">Resume</span>
+        </a>
+      </span>
+    </div>
+ 
+  <section class="tabbed-timeline">
+    <div class="tabs">
+      <button id="tab-work" class="tab active">Work</button>
+      <button id="tab-edu" class="tab">Education</button>
+    </div>
+    <div class="timeline-panel" id="work-panel">
+      <div class="timeline-card card-flex">
+    </ul>
+        <div class="timeline-logo"><img src="entrupy_logo.jpeg" alt="Entrupy Logo"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">June 2025 - Ongoing</div>
+          <div class="timeline-org">Entrupy</div>
+          <div class="timeline-role">Software Engineer -1</div>
+          <ul>
+            <li>Architected and deployed complex, usage-based billing engines for major clients, culminating in a system processing over 15,000+ high-volume transactions at scale.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-card card-flex">
+        <div class="timeline-logo"><img src="entrupy_logo.jpeg" alt="Entrupy Logo"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">Oct 2024 - May 2025</div>
+          <div class="timeline-org">Entrupy</div>
+          <div class="timeline-role">Python Developer Intern</div>
+          <ul>
+            <li>Engineered 5+ feature flags and profile-driven ACLs, replacing rigid role checks in 4 microservices and cutting manual access updates.</li>
+            <li>Built a dual-category auto-assigned user-profile system with admin UI, halving org/user onboarding time.</li>
+            <li>Converted product controls to toggle-based configs.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-card card-flex">
+        <div class="timeline-logo"><img src="tata_consultancy_services_logo.jpeg" alt="TCS Logo"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">June 2024 - July 2024</div>
+          <div class="timeline-org">TCS Research</div>
+          <div class="timeline-role">Computing Systems Research Intern</div>
+          <ul>
+            <li>Curated datasets for efficient RAG-based training on combined LLaMA and Mistral architectures.</li>
+            <li>Enhanced utilization metrics, hardware specs, and model data, reducing training time by 27.5%.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-panel" id="edu-panel" style="display:none;">
+      <div class="timeline-card card-flex">
+        <div class="timeline-logo"><img src="iitpkdlogo.jpeg" alt="IIT Palakkad Logo"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2021 - Present</div>
+          <div class="timeline-org">Indian Institute Of Technology Palakkad <span class="edu-grade">CGPA: 7.85</span></div>
+          <div class="timeline-role">B.Tech. Electrical Engineering</div>
+          <ul>
+            <li><strong>Technical Head, Petrichor'24 - Annual Techno Cultural:</strong><br><span style="font-size:0.95em; color:#bbb;">Led technical planning for Petrichor'24, boosting technical events by 27%, and broadening audience reach.<br> Managed 3 different teams and hosted Shri H.R. Hutton, Gaganyaan project director at ISRO.</span></li>
+            <li><strong>Project: Pathway – Inter IIT Tech Meet 13.0</strong><br><span style="font-size:0.95em; color:#bbb;">Secured top 10 position</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-card card-flex">
+        <div class="timeline-logo"><img src="sjislogo.png" alt="IIT Palakkad Logo"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2021</div>
+          <div class="timeline-org">Satyameva Jayate International School <span class="edu-grade">Percentage: 90.8%</span></div>
+          <div class="timeline-role">Senior Secondary</div>
+          <ul>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-card card-flex">
+        <div class="timeline-logo"><img src="ABPSlogo.png" alt="IIT Palakkad Logo"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2019</div>
+          <div class="timeline-org">Aditya Birla Public School Kovaya <span class="edu-grade">Percentage: 95.8%</span></div>
+          <div class="timeline-role">Secondary</div>
+          <ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+<!-- <section class="skills-tech-container">
+  <h2 class="skills-tech-title">Technologies</h2>
+  <div class="skills-tech-grid">
+    <div class="skills-tech-item">
+      <div class="skills-tech-logo"></div>
+      <span>Python</span>
+    </div>
+    <div class="skills-tech-item">
+      <div class="skills-tech-logo"></div>
+      <span>C/C++</span>
+    </div>
+    <div class="skills-tech-item">
+      <div class="skills-tech-logo"></div>
+      <span>TypeScript</span>
+    </div>
+    <div class="skills-tech-item">
+      <div class="skills-tech-logo"></div>
+      <span>SQL</span>
+    </div>
+    <div class="skills-tech-item">
+      <div class="skills-tech-logo"></div>
+      <span>Java</span>
+    </div>
+    <div class="skills-tech-item">
+      <div class="skills-tech-logo"></div>
+      <span>MySQL</span>
+    </div>
+    <div class="skills-tech-item">
+      <div class="skills-tech-logo"></div>
+      <span>PostgreSQL</span>
+    </div>
+    <div class="skills-tech-item">
+      <div class="skills-tech-logo"></div>
+      <span>SQL Server</span>
+    </div>
+    <div class="skills-tech-item">
+      <div class="skills-tech-logo"></div>
+      <span>Django</span>
+    </div>
+    <div class="skills-tech-item">
+      <div class="skills-tech-logo"></div>
+      <span>React Native</span>
+    </div>
+    <div class="skills-tech-item">
+      <div class="skills-tech-logo"></div>
+      <span>JavaScript</span>
+    </div>
+    <div class="skills-tech-item">
+      <div class="skills-tech-logo"></div>
+      <span>HTML5</span>
+    </div>
+    <div class="skills-tech-item">
+      <div class="skills-tech-logo"></div>
+      <span>CSS3</span>
+    </div>
+    <div class="skills-tech-item">
+      <div class="skills-tech-logo"></div>
+      <span>JSON</span>
+    </div>
+  </div>
+</section> -->
+  <section class="home-featured-projects">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <h2 class="home-featured-title">Featured Projects</h2>
+      <a href="projects.html" class="view-more-projects">view more &rarr;</a>
+    </div>
+    <div class="home-featured-list">
+      <div class="home-featured-project">
+        <img src="project1.png" alt="Weather App Screenshot" class="home-featured-img" />
+        <div class="home-featured-content">
+          <h3>Weather App for Scientists</h3>
+          <p class="home-featured-desc">Redesigned and deployed a full-stack weather monitoring application using Django REST and React Native, enabling real-time visualization of meteorological and air quality data for IIT Palakkad.</p>
+          <div class="home-featured-tags">
+            <span>PostgreSQL</span><span>Docker</span><span>FastAPI</span><span>React Native</span><span>Django</span><span>REST API</span><span>Python</span>
+          </div>
+          <div class="home-featured-links">
+            <a href="#" class="project-btn">Paper</a>
+            <a href="#" class="project-btn">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="home-featured-project">
+        <img src="project2.png" alt="Kochi Metro Screenshot" class="home-featured-img" />
+        <div class="home-featured-content">
+          <h3>Analyzing Kochi Metro's 5-Year Ridership and Travel Demand Data</h3>
+          <p class="home-featured-desc">Standardized over 30 million data points using SQL, ensuring data quality and uniformity. Extracted commuting patterns, uncovering insights that boosted ridership by up to 15%.</p>
+          <div class="home-featured-tags">
+            <span>PostgreSQL</span><span>Python</span><span>Data Analysis</span><span>Pandas</span><span>Matplotlib</span><span>Numpy</span><span>psycopg2</span>
+          </div>
+          <div class="home-featured-links">
+            <a href="#" class="project-btn">Paper</a>
+            <a href="#" class="project-btn">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>© 2024 Shubhan Mehrotra</p>
+  </footer>
+</body>
+</html> 
